@@ -1,5 +1,5 @@
 <template>
-  <div>
+ 
     <!-- <router-view v-slot="{ Component }">
     <keep-alive>
       <component :is="Component" />
@@ -26,7 +26,7 @@
      </tabbar>
      <router-view></router-view>
    </div>
-  </div>
+
    
 </template>
 

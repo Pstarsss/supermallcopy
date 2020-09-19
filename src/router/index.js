@@ -22,25 +22,25 @@ Router.prototype.push = function push(location){
 const routes = [
   {
     path: '/',
-    redirect:'/mall',
+    redirect:'/mall/homepage',
     component: HomePage
   },
-      {
+  {
         path: '/mall/homepage',
         component: HomePage 
-      },
-      {
+  },
+  {
         path: '/mall/cart',
         component: Cart 
-      },
-      {
+  },
+  {
         path: '/mall/classify',
         component: Classify
-      },
-      {
+  },
+  {
         path: '/mall/my',
         component: My 
-      },
+  },
     
   
  

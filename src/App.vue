@@ -3,7 +3,6 @@
     <div id="nav">
      <main-tabbar></main-tabbar>
     </div>
-
   </div>
 </template>
 <script>

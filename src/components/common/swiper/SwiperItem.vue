@@ -1,6 +1,6 @@
 <template>
-   <div class='my'>
-     <h2>我的信息也</h2>
+   <div class='swiperitem'>
+     <span>我的是轮播图</span>
    </div>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
-   <div class='my'>
-     <h2>我的信息也</h2>
+   <div class='swiperbox'>
+     <slot></slot>
    </div>
 </template>
 
-<script>
+<script>  
 export default {
   components: {},
   data() {

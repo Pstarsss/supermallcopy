@@ -1,6 +1,6 @@
 <template>
-   <div class='my'>
-     <h2>我的信息也</h2>
+   <div class='RecommandBox'>
+     <slot></slot>
    </div>
 </template>
 
@@ -10,9 +10,9 @@ export default {
   data() {
    return {
    };
-},
-
+  }
 }
 </script>
 <style lang='less' scoped>
+
 </style>
