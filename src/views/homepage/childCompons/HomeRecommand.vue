@@ -29,12 +29,10 @@ export default {
   },
 
   created(){
-    console.log(this.rec);
+  
   },
   BeforeMount(){
-    this.recom = this.rec;
-    console.log("123");
-    console.log(this.recom);
+;
   }
 }
 </script>

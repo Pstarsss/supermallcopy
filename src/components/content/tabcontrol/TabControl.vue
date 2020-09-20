@@ -18,7 +18,9 @@ export default {
 methods:{
   showAc(index){
     this.temp = index;
-  }
+    this.$emit('tabclick',this.temp);
+  },
+
 }
 
 }
@@ -28,12 +30,15 @@ methods:{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 10px 0;
-    font-size: 20px;
-    height:40px;
+    padding: 14px 0;
+    font-size: 18px;
+    height: 38px;
     line-height: 40px;
-    position:sticky;
-    top:44px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 44px;
+    border-radius:10px;
+    background-color: #ffe9fde0;
     & div{
       width: 30%;
       text-align:center;
