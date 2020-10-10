@@ -9,15 +9,25 @@
 <script>
 export default {
   components: {},
-  props:['controltitles'],
+  props:{
+    controltitles:{
+      type:[Array]
+    },
+    indexs:{
+      type:[String,Number],
+      default(){
+        return '0';
+      }
+    }
+  },
   data() {
    return {
-     temp:'0'
+     temp:0,
    };
 },
 methods:{
   showAc(index){
-    this.temp = index;
+    this.temp = index||indexs;
     this.$emit('tabclick',this.temp);
   },
 
@@ -34,9 +44,9 @@ methods:{
     font-size: 18px;
     height: 38px;
     line-height: 40px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 44px;
+    transition:all 0.5s;
+    // position: -webkit-sticky;
+    // position: sticky;
     border-radius:10px;
     background-color: #ffe9fde0;
     & div{

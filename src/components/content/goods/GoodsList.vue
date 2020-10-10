@@ -1,9 +1,6 @@
 <template>
    <div class='goodslist'>
-     <goods-list-item v-for="i in goodslist" :key="i.clientUrl" :goodsitem="i">
-
-     </goods-list-item>
-
+     <goods-list-item v-for="(i,j) in goodslist" :key="j" :goodsitem="i"></goods-list-item>
    </div>
 </template>
 
@@ -15,17 +12,20 @@ export default {
   },
   props:{
     goodslist:{
-      type:[Array],
+      type:[Array,String],
       default(){
         return []
       }
     }
   },
   data() {
-    return {
-    };
-  },
+      return {
+      };
+    },
+  created(){
+  }
 }
+
 </script>
 <style lang='less' scoped>
 .goodslist {

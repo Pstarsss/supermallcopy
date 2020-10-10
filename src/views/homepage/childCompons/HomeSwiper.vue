@@ -1,58 +1,41 @@
 <template>
-   <div class='Swiper'>
-     <swiper-box>
-       <swiper-item class="s1"></swiper-item>
-       
-     </swiper-box>
-     <!-- <div v-for="i in list" :key="i.link">
-       {{i.image}}
-       {{i.title}}
-     </div> -->
-   </div>
+  <div>
+    <swiper>
+      <swiper-item v-for="(item,index) in banners" :key="index">
+        <a :href="item.link">
+          <img :src="item.image" alt="" @load="swiperImgLoad">
+        </a>
+      </swiper-item>
+    </swiper>
+  </div>
 </template>
 
 <script>
-import {SwiperBox, SwiperItem} from '@/components/common/swiper/index.js'
-export default {
-  components: {
-    SwiperBox,
-    SwiperItem
-  },
-  props:{
-    banners:{
-      type:[Array],
-      default(){
-        return []
+  import Swiper from "@/components/common/swiper2/Swiper.vue";
+  import SwiperItem from "@/components/common/swiper2/SwiperItem.vue";
+
+  export default {
+    name: "HomeSwiper",
+    components: {
+      Swiper,
+      SwiperItem
+    },
+    props: {
+      banners: {
+        type: Array,
+        default() {
+          return []
+        }
+      }
+    },
+    methods: {
+      swiperImgLoad() {
+        this.$emit("swiperImgLoad");
       }
     }
-  },
-  data() {
-   return {
-     list:this.banners
-   };
-  },
-  created(){
-    
   }
-
-}
 </script>
-<style lang='less' scoped>
-.Swiper{
-  padding-top:44px;
-}
-.s1{
-  background-color: red;
-  width: 100%;
-  height: 300px;
-}
-.s2{
-  background-color: blue;
-}
-.s3{
-  background-color: orange;
-}
-.s4{
-  background-color: gray;
-}
+
+<style scoped>
+
 </style>

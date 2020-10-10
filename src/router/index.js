@@ -12,7 +12,7 @@ const HomePage = () => import ('../views/homepage/HomePage.vue');
 const Cart = () => import ('../views/cart/Cart.vue');
 const Classify = () => import ('../views/classify/Classify.vue');
 const My = () => import ('../views/my/My.vue');
-
+const Detail = () => import('@/views/detail/Detail.vue')
 
 const originalPush = Router.prototype.push;
 Router.prototype.push = function push(location){
@@ -41,7 +41,10 @@ const routes = [
         path: '/mall/my',
         component: My 
   },
-    
+  {
+        path: '/mall/detail/:id',
+        component: Detail 
+  },      
   
  
 ]

@@ -24,7 +24,6 @@
          <span slot="tabitem-title">我的</span>
        </tabbaritem>
      </tabbar>
-     <router-view></router-view>
    </div>
 
    
@@ -33,6 +32,9 @@
 <script>
 import tabbar from '@/components/common/tabbar/TabbarBox.vue'
 import tabbaritem from '@/components/common/tabbar/TabbarItem.vue'
+import Store from '@/network/store.js'
+let pro1 = Store.fetch();
+
 export default {
   components: {
     tabbar,
@@ -40,9 +42,11 @@ export default {
   },
   data() {
    return {
+     
      };
   },
   methods:{
+
   }
 
 }
@@ -55,5 +59,8 @@ require('@/assets/css/base.css')
 .iconfont-ali{
   font-size:26px;
   padding-bottom:2px;
+}
+.maintabbar{
+  z-index: 100;
 }
 </style>

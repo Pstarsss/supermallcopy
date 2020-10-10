@@ -1,6 +1,6 @@
 <template>
    <div class='swiperitem'>
-     <span>我的是轮播图</span>
+     <span>我的是轮播图<img src="" alt=""></span>
    </div>
 </template>
 
@@ -8,10 +8,12 @@
 export default {
   components: {},
   data() {
-   return {
-   };
-},
-
+    return {
+    };
+  },
+  methods:{
+   
+  }
 }
 </script>
 <style lang='less' scoped>

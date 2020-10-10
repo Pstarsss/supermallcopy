@@ -21,12 +21,15 @@ export default {
   display:flex;
   align-items: center;
   height:40px;
-  position: fixed;
-  top: 0;
-  left:0;
-  right:0;
   height:44px;
   justify-content: space-between;
+  background-color:var(--color-tint);
+  color:#fff;
+}
+.nav-bar .left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .nav-bar .center{
   display: flex;

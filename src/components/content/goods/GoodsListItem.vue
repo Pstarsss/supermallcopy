@@ -1,7 +1,7 @@
 <template>
-   <div class='goodslistitem' >
+   <div class='goodslistitem' @click="todetail">
      <div class="showimg">
-       <img :src="goodsitem.show.img" alt="">
+       <img :src="showimg" alt="" @load="imgload">
      </div>
      <div class="showinfo">
        <h4>{{goodsitem.title}}</h4>
@@ -15,11 +15,10 @@
 <script>
 export default {
   components: {
-
   },
   props:{
     goodsitem:{
-      type:[Object],
+      type:[Object,Array],
       default(){
         return {}
       }
@@ -27,9 +26,25 @@ export default {
   },
   data() {
     return {
-
+      id:''
     };
   },
+  computed:{
+    showimg(){
+      return this.goodsitem.image || this.goodsitem.show.img;
+    }
+  },
+  created(){  
+    this.id = this.goodsitem.iid;
+  },
+  methods:{
+    imgload(){
+      this.$bus.$emit('imgloaded');
+    },
+    todetail(){
+      this.$router.push('/mall/detail/'+this.id);
+    }
+  }
 }
 </script>
 <style lang='less' scoped>
